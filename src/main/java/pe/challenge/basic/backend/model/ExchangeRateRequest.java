@@ -13,11 +13,12 @@ import lombok.NoArgsConstructor;
 public class ExchangeRateRequest {
 
   @JsonProperty("amount")
-  private String amount; //"monto" : "12.4",
+  private Double amount; //12.3
 
-  @JsonProperty("origin_currency")
-  private String originCurrency; //"moneda_origen" : "Soles",
+  @JsonProperty("origin_currency_code")
+  private String originCurrencyCode; //PEN
 
-  @JsonProperty("destination_currency")
-  private String destinationCurrency;  //"moneda_destino" : "Dolares"
+  @JsonProperty("destination_currency_code")
+  private String destinationCurrencyCode; //DOL
+
 }

@@ -12,17 +12,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "currency")
+@Table(name = "exchange")
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Currency {
+public class ExchangeDto {
 
   @Id
-  @GeneratedValue(strategy= GenerationType.AUTO)
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
   private Integer id;
 
+  @Column(name = "code_origin_currency")
+  private String codeOriginCurrency;
+
+  @Column(name = "code_destination_currency")
+  private String codeDestinationCurrency;
+
   @Column(name = "exchange_rate")
-  private Double exchangeRate; //exchange_rate
+  private Double exchangeRate;
+
 }
